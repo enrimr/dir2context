@@ -1,0 +1,22 @@
+# Development files
+node_modules/
+npm-debug.log
+*.log
+
+# Local usage/output
+output_*.txt
+*.out
+*.zip
+
+# Tests and examples
+tests/
+examples/
+
+# Editor-specific
+.vscode/
+.idea/
+.DS_Store
+
+# Others
+README.draft.md
+

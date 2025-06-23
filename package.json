@@ -1,0 +1,25 @@
+{
+  "name": "dir2context",
+  "version": "1.0.0",
+  "description": "Generate clean context files from source directories for use with LLMs.",
+  "bin": {
+    "dir2context": "./index.js"
+  },
+  "keywords": [
+    "llm",
+    "context",
+    "cli",
+    "directory",
+    "code",
+    "source",
+    "tools",
+    "prompt",
+    "ai"
+  ],
+  "author": "Enrique Ismael Mendoza Robaina",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
+
