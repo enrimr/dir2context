@@ -15,14 +15,13 @@ npm install -g dir2context
 npx dir2context ./src --output context.txt
 ```
 
-
 ## 🚀 Usage
 
 ```bash
 dir2context [directory] [options]
 ```
 
-### Run with all defaults (include all files and directories from current folder)
+#### Run with all defaults (include all files and directories from current folder)
 
 ```bash
 dir2context
@@ -30,15 +29,18 @@ dir2context
 
 ### Options
 
-
-| Option                   | Description                                                            |
-| ------------------------ | ---------------------------------------------------------------------- |
-| `--output <file>`        | Output file name. Defaults to `output_<directory>.txt`.                |
-| `--ext <list>`           | Comma-separated list of file extensions to include (e.g. `.java,.ts`). |
-| `--exclude-dirs <list>`  | Comma-separated list of directories to exclude.                        |
-| `--exclude-files <list>` | Comma-separated list of specific files to exclude.                     |
-| `--ignore-hidden`        | Skip hidden files and directories (those starting with `.`).           |
-
+| Option                   | Description                                                                                   |
+|--------------------------|-----------------------------------------------------------------------------------------------|
+| `--output <file>`        | Output file name. Defaults to `dir2context_<timestamp>.txt`.                                  |
+| `--ext <list>`           | Comma-separated list of file extensions to include (e.g. `.java,.ts`).                        |
+| `--exclude-dirs <list>`  | Comma-separated list of directory names to exclude.                                           |
+| `--exclude-files <list>` | Comma-separated list of specific file names to exclude.                                       |
+| `--ignore-hidden`        | Skip hidden files and directories (those starting with `.`).                                  |
+| `--chunk-size <n>`       | Maximum number of characters per output file. Ensures files are kept whole (not split).       |
+| `--json`                 | Print summary in JSON format. If used with `--output`, also creates `<output>.stats.json`.    |
+| `--quiet`                | Suppress normal output (only errors will be printed).                                         |
+| `--help`, `-h`           | Show help message.                                                                            |
+| `--version`, `-v`        | Show version number.                                                                          |
 
 ## 💡 Examples
 

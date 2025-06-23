@@ -18,6 +18,7 @@
   ],
   "author": "Enrique Ismael Mendoza Robaina",
   "license": "MIT",
+  "type": "commonjs",
   "engines": {
     "node": ">=16.0.0"
   }
