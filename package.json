@@ -29,5 +29,11 @@
   "bugs": {
     "url": "https://github.com/enrimr/dir2context/issues"
   },
-  "homepage": "https://github.com/enrimr/dir2context#readme"
+  "homepage": "https://github.com/enrimr/dir2context#readme",
+  "dependencies": {
+    "tree-sitter": "^0.20.1",
+    "tree-sitter-javascript": "^0.19.0",
+    "tree-sitter-python": "^0.20.1",
+    "tree-sitter-typescript": "^0.20.1"
+  }
 }

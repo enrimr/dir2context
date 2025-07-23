@@ -1,0 +1,182 @@
+File: Calculator.java
+Path: /input/src/main/java/com/example/demo/Calculator.java
+Type: method
+Name: Calculator
+Lines: 15-18
+
+Calculator() {
+        this.name = "Basic Calculator";
+        this.scientific = false;
+    }
+
+
+File: Calculator.java
+Path: /input/src/main/java/com/example/demo/Calculator.java
+Type: method
+Name: Calculator
+Parameters: String, scientific
+Lines: 26-29
+
+Calculator(String name, boolean scientific) {
+        this.name = name;
+        this.scientific = scientific;
+    }
+
+
+File: Calculator.java
+Path: /input/src/main/java/com/example/demo/Calculator.java
+Type: method
+Name: public
+Parameters: double, double
+Lines: 38-40
+
+/**
+     * Suma dos n�meros.
+     * 
+     * @param a Primer n�mero
+     * @param b Segundo n�mero
+     * @return La suma de a y b
+     */
+public double add(double a, double b) {
+        return a + b;
+    }
+
+
+File: Calculator.java
+Path: /input/src/main/java/com/example/demo/Calculator.java
+Type: method
+Name: subtract
+Parameters: double, double
+Lines: 49-51
+
+subtract(double a, double b) {
+        return a - b;
+    }
+
+
+File: Calculator.java
+Path: /input/src/main/java/com/example/demo/Calculator.java
+Type: method
+Name: multiply
+Parameters: double, double
+Lines: 60-62
+
+multiply(double a, double b) {
+        return a * b;
+    }
+
+
+File: Calculator.java
+Path: /input/src/main/java/com/example/demo/Calculator.java
+Type: method
+Name: divide
+Parameters: double, double
+Lines: 72-77
+
+divide(double a, double b) {
+        if (b == 0) {
+            throw new ArithmeticException("Divisi�n por cero no permitida");
+        }
+        return a / b;
+    }
+
+
+File: Calculator.java
+Path: /input/src/main/java/com/example/demo/Calculator.java
+Type: method
+Name: public
+Parameters: double, exponent
+Lines: 88-93
+
+/**
+     * Calcula la potencia de un n�mero.
+     * Solo disponible en modo cient�fico.
+     * 
+     * @param base La base
+     * @param exponent El exponente
+     * @return base elevado a exponent
+     * @throws UnsupportedOperationException si no es una calculadora cient�fica
+     */
+public double power(double base, double exponent) {
+        if (!scientific) {
+            throw new UnsupportedOperationException("Funci�n solo disponible en modo cient�fico");
+        }
+        return Math.pow(base, exponent);
+    }
+
+
+File: Calculator.java
+Path: /input/src/main/java/com/example/demo/Calculator.java
+Type: method
+Name: squareRoot
+Parameters: double
+Lines: 103-111
+
+squareRoot(double number) {
+        if (!scientific) {
+            throw new UnsupportedOperationException("Funci�n solo disponible en modo cient�fico");
+        }
+        if (number < 0) {
+            throw new IllegalArgumentException("No se puede calcular la ra�z cuadrada de un n�mero negativo");
+        }
+        return Math.sqrt(number);
+    }
+
+
+File: Calculator.java
+Path: /input/src/main/java/com/example/demo/Calculator.java
+Type: method
+Name: getName
+Lines: 118-120
+
+getName() {
+        return name;
+    }
+
+
+File: Calculator.java
+Path: /input/src/main/java/com/example/demo/Calculator.java
+Type: method
+Name: setName
+Parameters: String
+Lines: 127-129
+
+setName(String name) {
+        this.name = name;
+    }
+
+
+File: Calculator.java
+Path: /input/src/main/java/com/example/demo/Calculator.java
+Type: method
+Name: isScientific
+Lines: 136-138
+
+isScientific() {
+        return scientific;
+    }
+
+
+File: Calculator.java
+Path: /input/src/main/java/com/example/demo/Calculator.java
+Type: method
+Name: setScientific
+Parameters: scientific
+Lines: 145-147
+
+setScientific(boolean scientific) {
+        this.scientific = scientific;
+    }
+
+
+File: Calculator.java
+Path: /input/src/main/java/com/example/demo/Calculator.java
+Type: method
+Name: toString
+Lines: 149-152
+
+@Override
+    public String toString() {
+        return name + (scientific ? " (Scientific)" : " (Basic)");
+    }
+
