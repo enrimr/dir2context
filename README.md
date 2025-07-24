@@ -83,6 +83,50 @@ Documentation extraction.
 Preprocessing for embedding or chunking tools.
 
 
+
+
+
+
+---
+## 🧠 Semantic Chunking (optional)
+
+Starting from this version, `dir2context` allows semantic code analysis to generate chunks based on **functions**, **methods**, and **classes**, using [`tree-sitter`](https://tree-sitter.github.io/tree-sitter/).
+
+### 🔧 Activation
+
+```bash
+dir2context ./src --ext .java --semantic-chunks --output output.txt
+````
+
+### 📄 Output Example
+
+```plaintext
+File: Calculator.java
+Path: /input/src/main/java/com/example/demo/Calculator.java
+Type: method
+Name: getName
+Lines: 118–120
+
+getName() {
+    return name;
+}
+```
+
+### 📦 Advantages
+
+* Greater precision when using the output in LLM / RAG models
+* Better context organization by logical code units
+* Ideal for projects requiring structural source code analysis
+
+> ✅ Compatible with all other flags (chunk size, ignore hidden, etc.)
+
+---
+
+
+
+
+
+
 ## 🪪 License
 
 MIT License

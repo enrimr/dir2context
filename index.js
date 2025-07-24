@@ -16,7 +16,7 @@ const { colors } = require('./lib/utils');
   try {
     const fileContents = await processDirectory(options.rootDirectory, options);
     
-    const chunks = splitIntoChunks(fileContents, options.outputFile, options.chunkSize);
+    const chunks = splitIntoChunks(fileContents, options.outputFile, options.chunkSize, options);
     for (const [filename, content] of chunks) {
       await fs.writeFile(filename, content, 'utf8');
     }
